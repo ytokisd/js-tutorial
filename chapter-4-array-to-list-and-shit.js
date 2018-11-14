@@ -18,17 +18,16 @@ function listToArray(list) {
 };
 
 function prepend(val, list) {
-	var lst = {value: val, rest: list};
-  	return lst
+  var lst = {value: val, rest: list};
+  return lst
 };
 
-var val
 function nth(list, position) {
-  		val = list.value
-		if (position != 0) {
-          nth(list.rest, position -1)
-		};
-  	return val;
+  var val = list.value
+  if (position != 0) {
+    val = nth(list.rest, position -1)
+  };
+  return val;
 };
 
 console.log(prepend(10, prepend(20, null)));
